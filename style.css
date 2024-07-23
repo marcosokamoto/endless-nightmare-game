@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow-color: #ffc700;
+  --black-color: #040101;
+  --white-color: #ffffff;
+  --white-faded-color: rgba(255, 255, 255, 0.7);
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: url(./assets/background-image.png) center no-repeat;
+  background-size: cover;
+}
+
+/* ----------------------- TEXTS ----------------------- */
+body p {
+  font-family: "Inter", sans-serif;
+  margin: 4px;
+}
+
+body h1 {
+  font-family: "Emilys Candy", cursive;
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--yellow-color);
+}
+
+#gotyText {
+  font-weight: 700;
+  color: var(--white-color);
+}
+
+#gotyText span {
+  color: var(--yellow-color);
+}
+
+#description {
+  color: var(--white-faded-color);
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+/* ----------------------- BUTTONS ----------------------- */
+#buttonsDiv {
+  margin-top: 72px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.button {
+  padding: 12px 32px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: none;
+  transition: 0.5s;
+}
+
+#readMoreButton {
+  text-decoration-line: underline;
+  color: var(--white-faded-color);
+  background-color: transparent;
+}
+
+#playNowButton {
+  color: var(--black-color);
+  background-color: var(--yellow-color);
+}
+
+/* ----------------------- BUTTON HOVER EFFECT ----------------------- */
+#playNowButton:hover,
+#readMoreButton:hover {
+  background-color: var(--black-color);
+  color: var(--yellow-color);
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+/* ----------------------- MEDIA QUERY ----------------------- */
+@media only screen and (max-width: 600px) {
+  html,
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  body p {
+    font-size: 1.5rem;
+  }
+
+  body h1 {
+    font-size: 4rem;
+  }
+
+  #buttonsDiv {
+    margin-top: 50px;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 413px) {
+  html,
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  body p {
+    font-size: 1rem;
+  }
+
+  body h1 {
+    font-size: 3rem;
+  }
+
+  #buttonsDiv {
+    margin-top: 50px;
+    flex-direction: column;
+  }
+
+  .button {
+    padding: 10px 30px;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  html,
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  body p {
+    font-size: 1rem;
+  }
+
+  body h1 {
+    font-size: 2.3rem;
+  }
+
+  #description {
+    font-size: 1rem;
+  }
+
+  #buttonsDiv {
+    margin-top: 50px;
+    flex-direction: column;
+  }
+
+  .button {
+    padding: 10px 30px;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+}
